@@ -18,6 +18,12 @@ public class Library {
         this.clock = clock;
     }
 
+    public int getBorrowCount(String username) {
+        var b = borrowers.get(username);
+        if (b == null) throw new IllegalArgumentException("Unknown user: " + username);
+        return b.loans().size();
+    }
+
     public Map<String, Book> books() { return books; }
     public Map<String, Borrower> borrowers() { return borrowers; }
     public Clock clock() { return clock; }

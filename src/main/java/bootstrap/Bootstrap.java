@@ -1,4 +1,3 @@
-
 package bootstrap;
 
 import domain.Book;
@@ -9,8 +8,6 @@ import util.SystemClock;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-public record Seed(AuthService authService, Library library) {}
 
 public class Bootstrap {
 
@@ -44,7 +41,7 @@ public class Bootstrap {
         borrowers.put("carol", new Borrower("carol", "pass3"));
 
         var auth = new AuthService(borrowers);
-        var lib = new Library(books, borrowers, new SystemClock());
+        var lib  = new Library(books, borrowers, new SystemClock());
         return new Seed(auth, lib);
     }
 }

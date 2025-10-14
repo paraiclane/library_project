@@ -11,11 +11,11 @@
   <description>A1 starter for a text-based Library System</description>
 
   <properties>
-    <maven.compiler.source>22</maven.compiler.source>
-    <maven.compiler.target>22</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>22</maven.compiler.release>
     <junit.version>5.10.2</junit.version>
   </properties>
+
 
   <dependencies>
     <dependency>
